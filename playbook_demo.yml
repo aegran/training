@@ -1,0 +1,16 @@
+---
+
+-name: demo playbook for giggles
+ hosts: localhost
+ become: yes
+ tasks:
+    -name: print the hostname of target
+     command: hostname
+     
+    -name: do an ls dump of the home directory
+     command: ls ~
+     
+    -name: print a success message to user
+     command: echo "+++ This is pretty cool right? +++
+        
+...
